@@ -1,12 +1,10 @@
-import React from 'react';
 
-const Home: React.FC = () => {
-    return (
-        <div>
-            <h1>Welcome to My Portfolio</h1>
-            <p>This is the home page of my portfolio.</p>
-        </div>
-    );
-};
+import Navbar from './Components/navbar';
 
-export default Home;
+const Home= () => {
+  return (
+    <Navbar />
+  )
+}
+
+export default Home
