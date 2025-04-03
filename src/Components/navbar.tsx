@@ -9,8 +9,8 @@ const Navbar = () => {
                 </div>
                 <div className="nav flex space-x-10  md:text-xl  text-m mr-8  md:mr-40">             
                         <a className="nav-item cursor-pointer hover:text-gray-400" href="#projects">Projects</a>
-                        <a className="nav-item cursor-pointer hover:text-gray-400" href=" ">About</a>
-                        <a className="nav-item cursor-pointer hover:text-gray-400" href=" ">Contact</a>
+                        <a className="nav-item cursor-pointer hover:text-gray-400" href="#about ">About</a>
+                        <a className="nav-item cursor-pointer hover:text-gray-400" href="#contact ">Contact</a>
                 </div>
         </div>
     )

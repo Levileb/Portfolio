@@ -3,9 +3,9 @@ import { AiOutlineDown } from "react-icons/ai";
 
 const Landing = () => {
   return (
-    <section className=" mb-20 mt-24 h-screen">
+    <section className=" md:mb-6 md:mt-24 mt-20 h-vh-90 ">
          <div className="grid gap-8 m-8 md:grid-cols-2 md:gap-16 lg:gap-32 
-                        md:items-center md:text-left pt-10 md:pt-24 mb-20
+                        md:items-center md:text-left pt-10 md:pt-24  mb-10
                         ">
        <div className="left-sec gap-8 md:pl-24  ">
         <div className="text  animate-slidein1 opacity-0 text-center md:text-left ">

@@ -6,10 +6,10 @@ module.exports = {
   theme: {
     extend: {
       height:{
-        "vh-90":"90vh",
+        "vh-90":"80vh",
       },
       width:{
-        "vw-90":"90vw",
+        "vw-90":"80vw",
       },
       keyframes:{
         slidein:{

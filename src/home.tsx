@@ -2,6 +2,7 @@
 import Navbar from './Components/navbar';
 import Landing from './section/landing';
 import Projects from './section/projects';
+import About from './section/about';
 
 
 const Home= () => {
@@ -11,7 +12,7 @@ const Home= () => {
 
     <Landing />
     <Projects />
-    
+    <About />
     </>
   )
 }
