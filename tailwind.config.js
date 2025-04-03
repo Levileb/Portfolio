@@ -5,6 +5,12 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
     extend: {
+      height:{
+        "vh-90":"90vh",
+      },
+      width:{
+        "vw-90":"90vw",
+      },
       keyframes:{
         slidein:{
           from:{

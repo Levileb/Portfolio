@@ -3,7 +3,7 @@ import { AiOutlineDown } from "react-icons/ai";
 
 const Landing = () => {
   return (
-    <section className="">
+    <section className=" mb-20 mt-24 h-screen">
          <div className="grid gap-8 m-8 md:grid-cols-2 md:gap-16 lg:gap-32 
                         md:items-center md:text-left pt-10 md:pt-24 mb-20
                         ">
