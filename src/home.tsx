@@ -1,7 +1,7 @@
 
 import Navbar from './Components/navbar';
-import Landing from './Components/landing';
-import Projects from './Components/projects';
+import Landing from './section/landing';
+import Projects from './section/projects';
 
 const Home= () => {
   return (

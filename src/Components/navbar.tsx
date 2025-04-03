@@ -2,7 +2,7 @@ import 'tailwindcss/tailwind.css';
 
 const Navbar = () => {
     return (
-        <div className="navbar w-full h-20 flex justify-between items-center px-6 bg-gray-800 text-white ">
+        <div className="navbar w-full h-20 flex justify-between items-center px-6 bg-gray-800 text-white animate-slidein1 opacity-0 ">
                 <div className="title text-3xl font-bold ml-8">
                         <h1>Lev.</h1>
                 </div>
