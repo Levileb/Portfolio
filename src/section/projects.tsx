@@ -1,17 +1,33 @@
+import { section } from 'framer-motion/m'
 import React from 'react'
+import image from "../assets/profile.svg";
 
 
 const Projects = () => {
   return (
-   <section id="projects" className="card h-screen w-vw-90 grid-cols-1 pt-24 items-center justify-self-center md:mb-10 mt-20">
-    <div className="title">
-      <h1 className="text-4xl font-bold text-center mb-8 mt-5">
-        My Projects
-      </h1>
-    </div>
-      <div className="card-cont w-4/6 h-4/6 border-solid bg-black items-center justify-self-center">       
+    <section id="projects" className='p-28 grid grid-cols-1 place-items-center h-screen pb-28'>
+      <div className="sec-cont grid gap-6 content-center justify-center items-center text-center">
+        <div className="title text-4xl font-bold">
+          Featured Projects
+        </div>
+        <div className="content bg-white shadow-lg grid-cols-1 md:grid-cols-2 rounded-lg p-6 max-w-sm">
+        <div className="image mb-4">
+          <img src={image} alt="" className="w-full h-auto rounded-md" />
+        </div>
+        <div className="text">
+            <div className="project-details">
+            <h1 className="project-name text-2xl font-semibold mb-2">
+              Project Name
+            </h1>
+            <p className="text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            </div>
+        </div>
+        </div>
       </div>
-   </section>
+    </section>
   )
 }
 

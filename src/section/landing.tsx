@@ -3,7 +3,7 @@ import { AiOutlineDown } from "react-icons/ai";
 
 const Landing = () => {
   return (
-    <section className=" md:mb-6 md:mt-24 mt-20 h-vh-90 ">
+    <section className=" md:mb-5 md:mt-24 mt-20 h-vh-90 mb-6">
          <div className="grid gap-8 m-8 md:grid-cols-2 md:gap-16 lg:gap-32 
                         md:items-center md:text-left pt-10 md:pt-24  mb-10
                         ">
@@ -30,7 +30,7 @@ const Landing = () => {
 
   
     </div>
-    <div className="arrow-down text-center  justify-items-center animate-slidein3 opacity-0 ">
+    <div className="arrow-down text-center  justify-items-center animate-slidein3 opacity-0 md:mt-20">
       <p className="ardown justify-items-center"> find out more about me below<br/>
         <AiOutlineDown className="arrow-down animate-bounce mt-2 w-6 h-6"/></p>
     </div>

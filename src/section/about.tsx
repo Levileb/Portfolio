@@ -3,9 +3,9 @@ import image from "../assets/profile.svg";
 export const About = () => {
   return (
     <>
-      <section id="about" className="about">
+      <section id="about" className="about  mt-20 h-vh-90">
         <div className="title">
-          <h1 className="text-4xl font-bold text-center  mt-5">About Me</h1>
+          <h1 className="text-4xl font-bold text-center ">About Me</h1>
         </div>
         <div className="body  grid gap-8 m-10 md:grid-cols-2 md:gap-16 lg:gap-32 
                         md:items-center md:text-left pt-10 md:pt-24  mb-10">
