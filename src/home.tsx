@@ -4,6 +4,7 @@ import Landing from './section/landing';
 import Projects from './section/projects';
 import About from './section/about';
 import Contact from './section/contact';
+import Footer from './Components/footer';
 
 
 
@@ -16,6 +17,8 @@ const Home = () => {
         <Projects />
         <About />
         <Contact />
+        <Footer />
+     
       </>
   );
 };

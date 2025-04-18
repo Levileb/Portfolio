@@ -4,7 +4,14 @@ const { transform } = require('typescript');
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
+    
     extend: {
+      screens:{
+        'laptop': '1024px',
+        'desktop': '1230px',
+        'cs':'768px',
+
+      },
       height:{
         "vh-90":"80vh",
       },
@@ -27,8 +34,13 @@ module.exports = {
         slidein1:"slidein 1s ease 400ms forwards",
         slidein2:"slidein 1s ease 600ms forwards",
         slidein3:"slidein 1s ease 800ms forwards",
+     
       },
+    
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-motion'),
+    require('tailwindcss-intersect') 
+],
 }

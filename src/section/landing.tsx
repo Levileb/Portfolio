@@ -1,43 +1,86 @@
 import image from "../assets/profile.svg";
+import { useEffect, useRef } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 
+const items = ['Levi John Ledesma|', 'Web Developer|', 'Flutter Developer|'];
+
 const Landing = () => {
+  const displayRef = useRef<HTMLHeadingElement>(null);
+  let index = useRef(0); 
+  useEffect(() => {
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typewrite() {
+      if (displayRef.current) {
+        const currentText = items[index.current];
+        const displayedText = isDeleting
+          ? currentText.substring(0, charIndex--)
+          : currentText.substring(0, charIndex++);
+
+        displayRef.current.textContent = displayedText;
+
+        if (!isDeleting && charIndex === currentText.length) {
+          isDeleting = true;
+          setTimeout(typewrite, 1000); 
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          index.current = (index.current + 1) % items.length;
+          setTimeout(typewrite, 1000); 
+        } else {
+          setTimeout(typewrite, isDeleting ? 50 : 100); 
+        }
+      }
+    }
+
+    typewrite();
+  }, []);
+
   return (
-    <section className=" md:mb-5 md:mt-24 mt-20 h-vh-90 mb-6">
-         <div className="grid gap-8 m-8 md:grid-cols-2 md:gap-16 lg:gap-32 
-                        md:items-center md:text-left pt-10 md:pt-24  mb-10
-                        ">
-       <div className="left-sec gap-8 md:pl-24  ">
-        <div className="text  animate-slidein1 opacity-0 text-center md:text-left ">
-            <p className="text-2xl">Hello there! I am,</p>
-                <h1 className="text-4xl font-medium mb-2">
-                  Levi John Ledesma
-                </h1>
-              <p> 
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              </p>
+    <section className=" lg:mb-5 lg:mt-24 mt-20 h-vh-90 mb-6">
+      <div className="grid gap-8 m-6 laptop:grid-cols-1 desktop:grid-cols-2 lg:gap-16 xl:gap-32 
+                      desktop:ml-28
+                      items-center lg:text-left pt-10 desktop:pt-24  mb-10">
+        <div className="left-sec gap-8 dekstop:pl-24  ">
+          <div className="text  text-center desktop:text-left intersect:motion-preset-slide-up motion-delay-100 ">
+            <p className="text-l lg:text-xl text-gray-700">Hello there! I am,</p>
+            <div className="h-12 lg:h-16 w-full
+             ">
+            <h1 ref={displayRef} className="desktop:text-6xl laptop:text-5xl text-4xl font-semibold  text-blue-500">
+            </h1>
+            </div>
+            <p className="text-m lg:text-xl text-gray-700"> 
+              An <strong>Information Technology</strong> that loves to design and
+              develop web and mobile systems.
+            </p>
           </div>
-            <div className="buttons animate-slidein2 opacity-0 mt-4 items-center flex justify-center md:justify-start ">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mr-4">Contact</button>
-            <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300">Download CV</button>
+          <div className="buttons  mt-4 items-center flex justify-center desktop:justify-start ">
+            <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 mr-4 text-lg 
+            intersect:motion-preset-bounce motion-delay-300
+            ">Contact</button>
+            <button className="bg-transparent text-blue-500 px-6 py-3 rounded-md hover:bg-blue-500 hover:text-white border-blue-500 
+              border-solid box-border border-2 text-lg intersect:motion-preset-bounce motion-delay-500"> 
+              Download CV</button>
           </div>
         </div>                   
-     
-      <div className="immg-container md:mr-14 animate-slidein3 opacity-0 ">
-       <img src={image} alt="image" className="w-8/12 mx-auto rounded-full" />
+    
+        <div className="img-container desktop:mr-14 intersect:motion-preset-slide-up motion-delay-100 flex justify-center">
+          <img 
+            src={image} 
+            alt="image" 
+            className="w-8/12 sm:w-5/12 laptop:w-4/12 desktop:w-8/12 mx-auto rounded-full" 
+          />
+        </div>
       </div>
 
-  
-    </div>
-    <div className="arrow-down text-center  justify-items-center animate-slidein3 opacity-0 md:mt-20">
-      <p className="ardown justify-items-center"> find out more about me below<br/>
-        <AiOutlineDown className="arrow-down animate-bounce mt-2 w-6 h-6"/></p>
-    </div>
+      <div className="arrow-down text-center justify-items-center lg:mt-20 mt-36 intersect:motion-preset-slide-up motion-delay-100 hidden desktop:block">
+        <p className="ardown justify-items-center text-gray-700"> 
+          <a href="#about"> find out more about me below</a><br/>
+          <AiOutlineDown className="arrow-down animate-bounce mt-2 w-6 h-6 text-blue-500"/>
+        </p>
+      </div>
     </section>
-   
-   
   )
 }
 
-export default Landing
+export default Landing;
