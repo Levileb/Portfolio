@@ -22,7 +22,7 @@ const Projects = () => {
             />
 
             <div className="project-details text-left">
-              <h1 className="text-2xl font-semibold mb-2">{project.name}</h1>
+              <h1 className="text-2xl font-semibold my-2">{project.name}</h1>
               <p className="text-gray-600 mb-1">{project.description}</p>
               <p className="text-gray-500 italic text-sm">
                 {project.technologies.join(", ")}
