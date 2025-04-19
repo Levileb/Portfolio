@@ -18,15 +18,15 @@ export const About = () => {
         </div>
         <div className="body flex flex-col desktop:flex-row m-8 mb-10 items-center desktop:items-start justify-center desktop:justify-start gap-10">
           <div className="profile hidden desktop:inline desktop:max-w-screen-md">
-            <img src={image} alt="" className="w-1/2 mx-auto intersect:motion-preset-slide-right motion-delay-100" />
+            <img src={image} alt="" className="w-1/2 mx-auto intersect:motion-preset-slide-up motion-delay-100" />
           </div>
 
           <div className="info w-full grid gap-8 grid-cols-1 text-center items-center justify-items-center desktop:justify-items-start">
-            <div className="name text-4xl font-semibold text-blue-500 md:ml-4 intersect:motion-preset-slide-left motion-delay-100">
+            <div className="name text-4xl font-semibold text-blue-500 md:ml-4 intersect:motion-preset-slide-up motion-delay-100">
               LEVI JOHN LEDESMA
             </div>
 
-            <div className="content text-gray-700 md:text-xl text-md text-justify max-w-3xl px-4 intersect:motion-preset-slide-left motion-delay-200">
+            <div className="content text-gray-700 md:text-xl text-md text-justify max-w-3xl px-4 intersect:motion-preset-slide-up motion-delay-200">
               I am taking up Bachelor of Science in <strong>Information Technology</strong> major in <strong>Software Technologies</strong> at West Visayas State University.
               <br />
               <br />
@@ -37,7 +37,7 @@ export const About = () => {
               These are the technologies that I am knowledgeable with:
             </div>
             <div className="languages gap-x-10 gap-y-4 grid grid-cols-4 md:grid-cols-8 desktop:grid-cols-4 1433:grid-cols-8 desktop:mx-12 1433:ml-0
-             text-gray-700 text-sm  intersect:motion-preset-slide-left motion-delay-300">
+             text-gray-700 text-sm  intersect:motion-preset-slide-up motion-delay-300">
               <div className="items-center justify-items-center">
                 <img src={flutter} alt="flutter" className="w-14 h-14 transition duration-300 hover:-translate-y-1 hover:scale-150" />
                 <p>Flutter</p>
