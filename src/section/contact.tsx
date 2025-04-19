@@ -23,7 +23,7 @@ const Contact = () => {
     return (
         <section 
            
-            className='space-y-4 grid grid-cols-1 place-items-center h-screen  mx-10 mt-38 mb-10
+            className='space-y-4 grid grid-cols-1 place-items-center h-screen  mx-10 mt-64 sm:mt-24 mb-10 relative
             '>
             <div  id="contact"  className="sec-cont grid  md:grid-cols-2 gap-6 content-center justify-center items-center text-center w-full">
                 <div className="title text-5xl md:text-6xl lg:text-7xl font-medium 
