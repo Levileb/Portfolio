@@ -3,8 +3,7 @@ import 'tailwindcss/tailwind.css';
 
 const Navbar = () => {
     return (
-        <div className="navbar grid grid-cols-2 fixed z-10  top-0 w-full h-32  justify-between pt-6 px-6  bg-transparent
-                bg-gradient-to-b from-white text-blue-500  drop-shadow-2xl">
+        <div className="navbar grid grid-cols-2 fixed z-10  top-0 w-full h-20 justify-between pt-6 px-6  bg-gray-100 text-blue-500  drop-shadow-2xl">
                 <div className="title text-3xl font-bold ml-2 md:ml-8 motion-preset-bounce motion-duration-200">
                         <a href="">Lev.</a>
                 </div>
