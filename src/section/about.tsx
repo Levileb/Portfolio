@@ -11,7 +11,7 @@ import mongodb from "../assets/mongo.svg";
 export const About = () => {
   return (
     <>
-      <section id="about" className="about my-20 h-vh-90 pt-20 mb-10 ">
+      <section id="about" className="about my-20 h-vh-90 pt-20 mb-10  ">
         <div className="title desktop:pl-64 flex flex-col items-center desktop:items-start">
           <h1 className="text-3xl font-medium text-center desktop:text-left intersect:motion-preset-slide-up motion-delay-100">About Me</h1>
           <div className="w-20 h-1 bg-blue-500 mt-2"></div>
@@ -26,7 +26,7 @@ export const About = () => {
               LEVI JOHN LEDESMA
             </div>
 
-            <div className="content text-gray-700 text-xl text-justify max-w-3xl px-4 intersect:motion-preset-slide-left motion-delay-200">
+            <div className="content text-gray-700 md:text-xl text-md text-justify max-w-3xl px-4 intersect:motion-preset-slide-left motion-delay-200">
               I am taking up Bachelor of Science in <strong>Information Technology</strong> major in <strong>Software Technologies</strong> at West Visayas State University.
               <br />
               <br />
