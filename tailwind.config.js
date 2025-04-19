@@ -10,6 +10,7 @@ module.exports = {
         'laptop': '1024px',
         'desktop': '1230px',
         'cs':'768px',
+        '1433':'1433px',
 
       },
       height:{

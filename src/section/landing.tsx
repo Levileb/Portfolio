@@ -1,10 +1,13 @@
 import image from "../assets/profile.svg";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
+import { FaTools } from "react-icons/fa";
 
-const items = ['Levi John Ledesma|', 'Web Developer|', 'Flutter Developer|'];
 
 const Landing = () => {
+  
+  const items = ['Levi John Ledesma|', 'Web Developer|', 'Flutter Developer|'];
+
   const displayRef = useRef<HTMLHeadingElement>(null);
   let index = useRef(0); 
   useEffect(() => {
@@ -36,6 +39,14 @@ const Landing = () => {
     typewrite();
   }, []);
 
+  const [showToast, setShowToast] = useState(false);
+
+  const handleDownloadClick = () => {
+    // You can handle the actual download logic here
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000); // Hide after 3s
+  };
+
   return (
     <section className=" lg:mb-5 lg:mt-24 mt-20 h-vh-90 mb-6">
       <div className="grid gap-8 m-6 laptop:grid-cols-1 desktop:grid-cols-2 lg:gap-16 xl:gap-32 
@@ -55,12 +66,24 @@ const Landing = () => {
             </p>
           </div>
           <div className="buttons  mt-4 items-center flex justify-center desktop:justify-start ">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 mr-4 text-lg 
-            intersect:motion-preset-bounce motion-delay-300
-            ">Contact</button>
-            <button className="bg-transparent text-blue-500 px-6 py-3 rounded-md hover:bg-blue-500 hover:text-white border-blue-500 
-              border-solid box-border border-2 text-lg intersect:motion-preset-bounce motion-delay-500"> 
-              Download CV</button>
+            <button 
+              className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 mr-4 text-lg 
+              intersect:motion-preset-bounce motion-delay-300"
+              onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                  }}
+                >
+              Contact
+            </button>
+            <button
+              className="bg-transparent text-blue-500 px-6 py-3 rounded-md
+               hover:bg-blue-500 hover:text-white border-blue-500 border-2 text-lg intersect:motion-preset-bounce motion-delay-500"
+              onClick={handleDownloadClick}>
+              Download CV
+            </button>
           </div>
         </div>                   
     
@@ -79,6 +102,13 @@ const Landing = () => {
           <AiOutlineDown className="arrow-down animate-bounce mt-2 w-6 h-6 text-blue-500"/>
         </p>
       </div>
+      {showToast && (
+              <div className="fixed top-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2
+               bg-blue-500 text-white px-4 py-2 rounded shadow-lg transition-opacity duration-300 z-50">
+                <FaTools className="text-white transition-all duration-300 scale-110" />
+                <span>Working on it!</span>
+              </div>
+            )}
     </section>
   )
 }

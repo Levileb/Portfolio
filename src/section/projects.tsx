@@ -2,7 +2,7 @@ import { projects } from "../projects/project";
 
 const Projects = () => {
   return (
-    <section id="projects" className="p-12 lg:p-32 pt-40 mt-24">
+    <section id="projects" className="p-12 lg:p-32 pt-40 my-32 ">
       <div className="text-center mb-2 lg:ml-8">
         <h2 className="text-3xl font-medium lg:text-left intersect:motion-preset-slide-up motion-delay-200
           ">Featured Projects</h2>

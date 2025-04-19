@@ -22,9 +22,10 @@ const Contact = () => {
       
     return (
         <section 
-            id="contact" 
-            className='space-y-4 grid grid-cols-1 place-items-center h-screen pt-18 mt-64 m-14'>
-            <div className="sec-cont grid  md:grid-cols-2 gap-6 content-center justify-center items-center text-center w-full">
+           
+            className='space-y-4 grid grid-cols-1 place-items-center h-screen  mx-10 mt-38 mb-10
+            '>
+            <div  id="contact"  className="sec-cont grid  md:grid-cols-2 gap-6 content-center justify-center items-center text-center w-full">
                 <div className="title text-5xl md:text-6xl lg:text-7xl font-medium 
                             intersect:motion-preset-slide-up motion-delay-100 md:text-left md:pl-38 laptop:pl-40 text-blue-500 cs:w-14">
                     Let's Connect
@@ -87,7 +88,7 @@ const Contact = () => {
             </div>
 
             {copied && (
-                <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded shadow-lg transition-opacity duration-300">
+                <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded shadow-lg transition-opacity duration-300">
                     <MdCheckCircle className="text-white transition-all duration-300 scale-110" />
                     <span>Copied to clipboard!</span>
                 </div>
